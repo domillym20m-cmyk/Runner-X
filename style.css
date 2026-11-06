@@ -1,0 +1,299 @@
+:root {
+  --ink: #171914;
+  --muted: #65685f;
+  --lime: #d7ff3f;
+  --paper: #f6f7f1;
+  --line: #e3e5dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar,
+.footer {
+  min-height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar {
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.07em;
+}
+
+.logo span {
+  color: #769900;
+}
+
+.nav-cta {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero {
+  min-height: 590px;
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 7%;
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: #668500;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+h1,
+.signup h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.075em;
+}
+
+h1 span,
+.signup h2 span {
+  color: #779900;
+}
+
+.hero-description {
+  max-width: 440px;
+  margin: 24px 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.button {
+  min-height: 52px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--lime);
+}
+
+.button-primary:hover {
+  background: #c7f127;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.hero-image {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  background: #e7ebd8;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  display: block;
+  object-fit: cover;
+}
+
+.image-label {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 8px 11px;
+  background: var(--lime);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.features {
+  padding: 48px 8% 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.feature-number {
+  color: #779900;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.feature h2 {
+  margin: 14px 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: -0.04em;
+}
+
+.feature p,
+.signup > div > p:last-child {
+  max-width: 320px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.signup {
+  padding: 64px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  background: var(--lime);
+}
+
+.signup .eyebrow {
+  color: #445900;
+}
+
+.signup h2 {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+}
+
+.signup h2 span {
+  color: #445900;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.input-row input {
+  min-width: 0;
+  min-height: 52px;
+  flex: 1;
+  padding: 0 14px;
+  border: 1px solid rgba(23, 25, 20, 0.2);
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+}
+
+.button-dark {
+  color: white;
+  background: var(--ink);
+}
+
+.button-dark:hover {
+  background: #34372d;
+}
+
+.signup-form small {
+  display: block;
+  margin-top: 11px;
+  color: #48532a;
+  line-height: 1.5;
+}
+
+.footer {
+  min-height: 90px;
+}
+
+.footer p {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .footer {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .hero {
+    padding: 54px 6%;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-image,
+  .hero-image img {
+    min-height: 280px;
+  }
+
+  .features {
+    padding: 40px 6%;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .signup {
+    padding: 48px 6%;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-cta {
+    font-size: 0.8rem;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .button-dark {
+    width: 100%;
+  }
+}
